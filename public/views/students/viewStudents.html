@@ -1,0 +1,29 @@
+
+<div class="row">
+    <div class="col-md-12">
+        <h1>View Students</h1>
+        <table class="table" ng-if="students.length > 0">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Marks</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="student in students">
+                    <td ng-bind="student.name"></td>
+                    <td ng-bind="student.marks"></td>
+                    <td>
+                        <button type="button" class="btn btn-danger btn-xs" ng-click="deleteStudent(student)">
+                            <span class="glyphicon glyphicon-trash"></span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="alert alert-warning" ng-if="students.length === 0">
+            <span class="glyphicon glyphicon-warning-sign"></span> No students exist!
+        </div>
+    </div>
+</div>

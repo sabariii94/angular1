@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular 1</title>
+
+    <!-- third party libraries -->
+    <script src="/assets/libs/angular.min.js"></script>
+    <script src="/assets/libs/angular-route.min.js"></script>
+    <script src="/assets/libs/jquery-3.3.1.min.js"></script>
+    <script src="/assets/libs/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/assets/libs/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/libs/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css">
+
+    <!-- project files -->
+    <script src="/scripts/index.js"></script>
+    <script src="/scripts/services/students.js"></script>
+    <script src="/scripts/controllers/students/addStudent.js"></script>
+    <script src="/scripts/controllers/students/viewStudents.js"></script>
+    <script src="/scripts/routes/route.js"></script>
+
+</head>
+<body ng-app="mainApp">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <br>
+                <a href="/#!/addStudent" class="btn btn-danger">Add Student</a>
+                <a href="/#!/viewStudents" class="btn btn-success">View Students</a>
+            </div>
+        </div>
+        <hr>
+        <div ng-view></div>
+    </div>
+</body>
+</html>
